@@ -30,6 +30,7 @@ export default function Login(){
 
             localStorage.setItem("token", data.token);
             navigate("/tasks");
+        // eslint-disable-next-line no-unused-vars
         } catch (err) {
             setError("Usuário ou senha inválidos");
         }
