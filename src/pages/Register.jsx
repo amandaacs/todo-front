@@ -38,7 +38,7 @@ export default function Register(){
                 <Typography variant="h5" gutterBottom>Cadastre-se</Typography>
                 <form onSubmit={handleSubmit}>
                     <TextField fullWidth margin="normal" label="Usuário" name="username" value={form.username} onChange={handleChange} />
-                    <TextField fullWidth margin="normal" label="Senha" name="password" value={form.password} onChange={handleChange} />
+                    <TextField type="password" fullWidth margin="normal" label="Senha" name="password" value={form.password} onChange={handleChange} />
                     <Button fullWidth type="submit" variant="contained" sx={{ mt: 2 }}>Registrar</Button>
                 </form>
                 {message && <Typography mt={2} color="primary">{message}</Typography>}
