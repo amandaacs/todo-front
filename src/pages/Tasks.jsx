@@ -93,7 +93,7 @@ export default function Tasks(){
         try {
             
 
-            const response = await fetch(`http://localhost:8080/api/tasks/${editTaskId}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/tasks/${editTaskId}`, {
                 method: "PUT", 
                 headers: {
                     "Content-Type": "application/json",
@@ -124,7 +124,7 @@ export default function Tasks(){
 
     const handleCompleteTask = async (taskId) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/tasks/${taskId}/complete`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/tasks/${taskId}/complete`, {
                 method: "PUT", 
                 headers: {
                     "Content-Type": "application/json", 
@@ -148,7 +148,7 @@ export default function Tasks(){
 
     const handleUndoTask = async (taskId) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/tasks/${taskId}/undo`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/tasks/${taskId}/undo`, {
                 method: "PUT", 
                 headers: {
                     "Content-Type": "application/json", 
@@ -171,7 +171,7 @@ export default function Tasks(){
 
     const handleDeleteTask = async (id) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/tasks/${id}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/tasks/${id}`, {
                 method: "DELETE", 
                 headers: {
                     Authorization: `Bearer ${token}`
